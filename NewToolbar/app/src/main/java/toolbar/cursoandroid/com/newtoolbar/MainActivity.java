@@ -27,14 +27,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-
-       // MenuItem m1 = menu.add(0,0,0,"Item 1");
-        //m1.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        //m1.setActionView(sv);
+        SearchView sv = new SearchView(this);
+        sv.setOnQueryTextListener(new SearchFiltro());
+        MenuItem m1 = menu.add(0,0,0,"Item 1");
+        m1.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        m1.setActionView(sv);
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_principal,menu);
-        SearchView sv = (SearchView) menu.findItem(R.id.item_pesquisa).getActionView();
-        sv.setOnQueryTextListener(new SearchFiltro());
+
+
         return true;
     }
     private class SearchFiltro implements SearchView.OnQueryTextListener{

@@ -11,11 +11,11 @@
         android:orderInCategory="100"
         app:showAsAction="never"/>
 
-    <item
+    <!--<item
         android:id="@+id/item_pesquisa"
         android:icon="@drawable/ic_search_black_24dp"
         android:orderInCategory="200"
         android:title="Pesquisa"
         android:actionViewClass="android.widget.SearchView"
-        app:showAsAction="always" />
+        app:showAsAction="always" />-->
 </menu>
